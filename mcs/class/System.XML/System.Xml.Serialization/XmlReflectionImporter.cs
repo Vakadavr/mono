@@ -910,6 +910,7 @@ namespace System.Xml.Serialization {
 
 				XmlTypeMapMemberElement member = new XmlTypeMapMemberElement ();
  				member.ElementInfo = ImportElementInfo (declaringType, XmlConvert.EncodeLocalName(rmember.MemberName), defaultNamespace, rmember.MemberType, member, atts);
+ 				member.Ignore = atts.XmlIgnore;
 				mapMember = member;
 			}
 

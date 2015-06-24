@@ -241,7 +241,7 @@ namespace System.Xml.Serialization
 			{
 				foreach (XmlTypeMapMemberElement member in members)
 				{
-					if (!MemberHasValue (member, ob, isValueList)) continue;
+					if (!MemberHasValue (member, ob, isValueList) || member.Ignore) continue;
 					object memberValue = GetMemberValue (member, ob, isValueList);
 					Type memType = member.GetType();
 
